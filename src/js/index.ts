@@ -1,12 +1,37 @@
-interface Person {
-    firstName: string;
-    lastName: string;
+let elmById = document.getElementById('one')
+
+let elmByClassName = document.getElementsByClassName('usundt')
+
+let elmByTagName = document.getElementsByTagName('li')
+
+console.log(elmByTagName)
+
+for (let i = 0; i < elmByTagName.length; i++) { 
+    console.log([i])
+}
+document.getElementById('three').setAttribute('class', 'sundt')
+
+for (let i = 0; i < elmByTagName.length; i++) { 
+    console.log([i])
 }
 
-function greeter(person: Person): string {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-let user: Person = { firstName: "John", lastName: "Doe" };
+document.getElementsByClassName('sundt')[2].setAttribute('class', 'usundt')
 
-let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
-element.innerHTML = greeter(user);
+for (let i = 0; i < elmByTagName.length; i++) { 
+    console.log([i])
+}  
+
+var x = document.getElementById('one').parentNode.nodeName
+console.log(x)
+
+var x = document.getElementById('one').lastChild.nodeName
+console.log(x)
+
+var node = document.createElement("LI")
+var textNode = document.createTextNode("Kage")
+node.appendChild(textNode)
+document.getElementById('listeUsund').appendChild(node)
+
+
+
+console.log('så kommer der ikke mere')
